@@ -1,0 +1,976 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+  /* background-color: #f7f7f7; */
+}
+/* navbar */
+nav {
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  /* background-color: #1ca0e3; */
+}
+#main {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  font-size: 1.2rem;
+}
+#logo img {
+  width: 100%;
+}
+#main a {
+  text-decoration: none;
+  color: white;
+}
+#main a:hover {
+  text-decoration: none;
+  color: rgb(158, 206, 250);
+}
+#main div:nth-child(1) {
+  width: 15%;
+}
+#main div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  max-width: max-content;
+  /* width: 55%; */
+}
+#main div:nth-child(3) {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  width: 15%;
+}
+#logo {
+  width: 14%;
+}
+/* navbar end */
+
+/* searchbar */
+.sbt > img {
+  width: 60%;
+  filter: invert(1);
+}
+
+.dt,
+.nm,
+.loc {
+  border: none;
+}
+.search-bar {
+  display: flex;
+  position: absolute;
+  top: 60%;
+  left: 22%;
+}
+@media (min-width: 2100px) {
+  .search-bar {
+    position: relative;
+    position: absolute;
+    top: 60%;
+    left: 22%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vw;
+    margin-bottom: 10vw;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: #fff;
+    height: 4vw;
+    gap: 1vw;
+    flex-grow: 1;
+    box-shadow: 0 0 0 0.75vw rgb(206, 206, 206);
+  }
+  .loc:focus,
+  .dt:focus,
+  .nm:focus {
+    outline: none;
+  }
+
+  .input-section {
+    display: flex;
+    align-items: center;
+    gap: 1.25vw;
+  }
+
+  .divider {
+    width: 0.125vw;
+    height: 2.5vw;
+    background-color: #bdbdbd;
+  }
+
+  .loc {
+    width: 15vw;
+    color: black;
+  }
+
+  .nm {
+    width: 11.5vw;
+    color: black;
+  }
+
+  .dt {
+    width: 11vw;
+    color: black;
+  }
+
+  .btn_homepage {
+    color: #0073ff;
+    /* Set the text color to white */
+    background-color: #0073ff;
+    /* Set the background color to blue */
+    padding: 1.2vw;
+    border: 1vw;
+    border-radius: 50%; /* Make the button circular */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon i {
+    font-size: 1.5vw;
+  }
+
+  .location-icon {
+    color: rgb(200, 9, 9);
+  }
+
+  .sbt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(28, 160, 227);
+    border-radius: 50%;
+    height: 3.5vw;
+    width: 3.5vw;
+    padding: 0;
+  }
+
+  button .sbt > img {
+    width: 60%;
+
+    filter: invert(1);
+  }
+
+  button.sbt {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 1420px) and (max-width: 2100px) {
+  .search-bar {
+    /* position: relative;
+    top: 60%;
+    left: 22%; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vw;
+    margin-bottom: 10vw;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: #fff;
+    height: 4vw;
+    gap: 1vw;
+    flex-grow: 1;
+    box-shadow: 0 0 0 0.75vw rgb(206, 206, 206);
+  }
+  .loc:focus,
+  .dt:focus,
+  .nm:focus {
+    outline: none;
+  }
+
+  .input-section {
+    display: flex;
+    align-items: center;
+    gap: 1.15vw;
+  }
+
+  .divider {
+    width: 0.125vw;
+    height: 2.5vw;
+    background-color: #bdbdbd;
+  }
+
+  .loc {
+    width: 15vw;
+    color: black;
+  }
+
+  .nm {
+    width: 11.5vw;
+    color: black;
+  }
+
+  .dt {
+    width: 11vw;
+    color: black;
+  }
+
+  .btn_homepage {
+    color: #0073ff;
+    /* Set the text color to white */
+    background-color: #0073ff;
+    /* Set the background color to blue */
+    padding: 1.2vw;
+    border: 1vw;
+    border-radius: 50%; /* Make the button circular */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon i {
+    font-size: 1.5vw;
+  }
+
+  .location-icon {
+    color: rgb(200, 9, 9);
+  }
+
+  .sbt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(28, 160, 227);
+    border-radius: 50%;
+    height: 3.5vw;
+    width: 3.5vw;
+    padding: 0;
+  }
+
+  button.sbt {
+    margin-left: auto;
+  }
+}
+/* navbar media query */
+@media screen and (width<=1000px) {
+  #main {
+    font-size: 1rem;
+  }
+  #logo {
+    width: 12%;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1420px) {
+  .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vw;
+    margin-bottom: 10vw;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: #fff;
+    height: 4vw;
+    gap: 1vw;
+    flex-grow: 1;
+    box-shadow: 0 0 0 0.75vw rgb(206, 206, 206);
+    font-size: 1vw;
+  }
+  .loc:focus,
+  .dt:focus,
+  .nm:focus {
+    outline: none;
+  }
+
+  .input-section {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+  }
+
+  .divider {
+    width: 0.125vw;
+    height: 2.5vw;
+    background-color: #bdbdbd;
+  }
+
+  .loc {
+    width: 15vw;
+    color: black;
+  }
+
+  .nm {
+    width: 11.5vw;
+    color: black;
+  }
+
+  .dt {
+    width: 11vw;
+    color: black;
+  }
+
+  .btn_homepage {
+    color: #0073ff;
+    /* Set the text color to white */
+    background-color: #0073ff;
+    /* Set the background color to blue */
+    padding: 1.2vw;
+    border: 1vw;
+    border-radius: 50%; /* Make the button circular */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon i {
+    font-size: 1.5vw;
+  }
+
+  .location-icon {
+    color: rgb(200, 9, 9);
+  }
+
+  .sbt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(28, 160, 227);
+    border-radius: 50%;
+    height: 3.5vw;
+    width: 3.5vw;
+    padding: 0;
+  }
+
+  button.sbt {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .search-bar {
+    top: 60%;
+    left: 11%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vw;
+    margin-bottom: 10vw;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: #fff;
+    height: 4vw;
+    gap: 1vw;
+    flex-grow: 1;
+    box-shadow: 0 0 0 0.75vw rgb(206, 206, 206);
+    font-size: 1vw;
+  }
+  .loc:focus,
+  .dt:focus,
+  .nm:focus {
+    outline: none;
+  }
+
+  .input-section {
+    display: flex;
+    align-items: center;
+    gap: 0.75vw;
+  }
+
+  .divider {
+    width: 0.125vw;
+    height: 2.5vw;
+    background-color: #bdbdbd;
+  }
+
+  .loc {
+    width: 15vw;
+    color: black;
+  }
+
+  .nm {
+    width: 11.5vw;
+    color: black;
+  }
+
+  .dt {
+    width: 11vw;
+    color: black;
+  }
+
+  .btn_homepage {
+    color: #0073ff;
+    /* Set the text color to white */
+    background-color: #0073ff;
+    /* Set the background color to blue */
+    padding: 1.2vw;
+    border: 1vw;
+    border-radius: 50%; /* Make the button circular */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon i {
+    font-size: 1.5vw;
+  }
+
+  .location-icon {
+    color: rgb(200, 9, 9);
+  }
+
+  .sbt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(28, 160, 227);
+    border-radius: 50%;
+    height: 3.5vw;
+    width: 3.5vw;
+    padding: 0;
+  }
+
+  .sbt i {
+    color: white;
+    font-size: 1.5vw;
+  }
+
+  button.sbt {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+  .search-bar {
+    top: 60%;
+    left: 11%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vw;
+    margin-bottom: 10vw;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: #fff;
+    height: 4vw;
+    gap: 1vw;
+    flex-grow: 1;
+    box-shadow: 0 0 0 0.75vw rgb(206, 206, 206);
+    font-size: 2vw;
+  }
+  .loc:focus,
+  .dt:focus,
+  .nm:focus {
+    outline: none;
+  }
+
+  .input-section {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .divider {
+    width: 0.125vw;
+    height: 5vw;
+    background-color: #bdbdbd;
+  }
+
+  .loc {
+    width: 15vw;
+    color: black;
+  }
+
+  .nm {
+    width: 11.5vw;
+    color: black;
+  }
+
+  .dt {
+    width: 11vw;
+    color: black;
+  }
+
+  .btn_homepage {
+    color: #0073ff;
+    /* Set the text color to white */
+    background-color: #0073ff;
+    /* Set the background color to blue */
+    padding: 1.2vw;
+    border: 1vw;
+    border-radius: 50%; /* Make the button circular */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon i {
+    font-size: 1.5vw;
+  }
+
+  .location-icon {
+    color: rgb(200, 9, 9);
+  }
+
+  .sbt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(28, 160, 227);
+    border-radius: 50%;
+    height: 7.5vw;
+    width: 7.5svw;
+    padding: 0;
+  }
+
+  button.sbt {
+    margin-left: auto;
+  }
+}
+
+/* --------------------------best ads --------------- */
+#bestAds {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+#bestAds h1 {
+  text-wrap: nowrap;
+  width: 60%;
+  text-align: center;
+  font-size: 2rem;
+}
+#bestAds div {
+  width: 18%;
+}
+#bestAds img {
+  width: 100%;
+}
+#satisfied {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 80%;
+  margin: auto;
+  gap: 15px;
+}
+.satisfiedCard {
+  /* border: 1px solid red; */
+  margin-bottom: 30px;
+}
+.satisfiedCard > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  padding-bottom: 18px;
+}
+
+#icon {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  width: 6%;
+  font-size: 13px;
+  margin-right: 20px;
+}
+#icon > img {
+  width: 100%;
+}
+.satisfiedCard > div > div:nth-child(1) {
+  width: 15%;
+  border-radius: 50%;
+}
+.satisfiedCard > div > div:nth-child(2) {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: space-between;
+}
+.satisfiedCard > div > div:nth-child(2) h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  margin: 0;
+}
+.satisfiedCard > div > div:nth-child(2) p {
+  font-size: 0.9rem;
+  margin: 0;
+  margin-top: 5px;
+  font-weight: 400;
+  color: rgb(132, 148, 179);
+}
+/* .satisfiedCard > div > div:nth-child(3) {
+  width: 20%;
+  font-size: 1.4rem;
+  text-wrap: nowrap;
+  color: rgb(123, 122, 122);
+  border: 1px solid red;
+} */
+
+.satisfiedCard > div img {
+  width: 100%;
+  border-radius: 50%;
+  /* border: 1px solid red; */
+}
+.satisfiedCard > p {
+  padding: 0px 10px;
+  padding-top: 18px;
+  margin: 5px 0;
+  font-size: 14px;
+  border-top: 1px solid rgb(203, 203, 203);
+  color: rgb(132, 148, 179);
+  line-height: 140%;
+  /* border: 1px solid red; */
+}
+@media (max-width: 300px) {
+  .search-bar {
+    top: 60%;
+    left: 22%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vw;
+    margin-bottom: 10vw;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: #fff;
+    height: 4vw;
+    gap: 1vw;
+    flex-grow: 1;
+    box-shadow: 0 0 0 0.75vw rgb(206, 206, 206);
+    font-size: 3vw;
+  }
+  .loc:focus,
+  .dt:focus,
+  .nm:focus {
+    outline: none;
+  }
+
+  .input-section {
+    display: flex;
+    align-items: center;
+    gap: 4.75vw;
+  }
+
+  .divider {
+    width: 0.125vw;
+    height: 5vw;
+    background-color: #bdbdbd;
+  }
+
+  .loc {
+    width: 15vw;
+    color: black;
+  }
+
+  .nm {
+    width: 11.5vw;
+    color: black;
+  }
+
+  .dt {
+    width: 11vw;
+    color: black;
+  }
+
+  .btn_homepage {
+    color: #0073ff;
+    /* Set the text color to white */
+    background-color: #0073ff;
+    /* Set the background color to blue */
+    padding: 1.2vw;
+    border: 1vw;
+    border-radius: 50%; /* Make the button circular */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon i {
+    font-size: 1.5vw;
+  }
+
+  .location-icon {
+    color: rgb(200, 9, 9);
+  }
+
+  .sbt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(28, 160, 227);
+    border-radius: 50%;
+    height: 9vw;
+    width: 9vw;
+    padding: 0;
+  }
+
+  button.sbt {
+    margin-left: auto;
+  }
+}
+
+.headers {
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: bottom;
+  color: #fff; /* Text color */
+
+  padding: 20px;
+}
+
+.text > .sub {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.text > .sub > h1 {
+  /* font-family: "Gill Sans", sans-serif; */
+
+  font-weight: 400;
+  font-size: 6vw;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.sub-heading {
+  margin-top: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.sub-heading > h4 {
+  /* font-family: Arial Helvetica sans-serif; */
+
+  font-size: 1.4vw;
+  margin: 0;
+  padding: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* #hero {
+  width: 70%;
+  margin: auto;
+  display: block;
+  margin-top: 9%;
+  padding: 20px;
+}
+
+
+/* about section  */
+.aboutSection {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  /* border: 3px solid green; */
+  gap: 40px;
+  margin-top: -20px;
+}
+.aboutSection > .aboutbox {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+}
+.aboutbox > .aboutfirst {
+  width: 40%;
+}
+.aboutbox > .aboutfirst img {
+  width: 100%;
+  height: 45vh;
+}
+.aboutSection > .aboutbox > .aboutSecond {
+  width: 40%;
+
+  padding: 20px;
+}
+.aboutSecond > h1 {
+  color: rgb(26, 32, 44);
+  margin-bottom: 18px;
+}
+.aboutSecond > p {
+  width: 90%;
+  color: rgb(132, 148, 179);
+  /* font-family: Arial Helvetica sans-serif; */
+  font-size: 18px;
+  line-height: 24px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.aboutSecond > button {
+  display: block;
+  width: 8rem;
+  margin: auto;
+  margin-top: 40px;
+  padding: 12px;
+  margin-left: -1px;
+  border: none;
+  border-radius: 18px;
+  background-color: #1ca0e3;
+  color: white;
+  font-weight: bold;
+}
+.aboutSecond > button:hover {
+  background-color: #3e8c87;
+  color: white;
+  cursor: pointer;
+}
+
+/* googleplat store page */
+#googlePlay {
+  width: 80%;
+  margin: auto;
+  margin-top: 40px;
+}
+#googlePlay > img {
+  width: 100%;
+}
+
+/* footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #1ca0e3;
+  color: white;
+}
+footer .top {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 80px;
+}
+footer .top .logo {
+  width: 30%;
+}
+footer .top .logo img {
+  width: 75%;
+  margin-bottom: 18px;
+}
+footer .top .logo p {
+  line-height: 30px;
+  padding-left: 15px;
+}
+footer .top .about {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  gap: 80px;
+}
+
+footer .top .about h2 {
+  margin-bottom: 15px;
+}
+footer .top .about ul {
+  list-style: none;
+  line-height: 40px;
+  margin-bottom: 15px;
+  padding-left: 0;
+}
+
+footer .bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 80px;
+  padding-bottom: 40px;
+}
+footer hr {
+  width: 90%;
+  margin: auto;
+}
